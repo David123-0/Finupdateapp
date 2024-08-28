@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eb9b9b;
+    margin: 0;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+
+#calendar-input{
+    display: inline-block;
+    width: 100px;
+}
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%;
+    margin: 5px 0 15px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Hide buttons for PDF output */
+@media print {
+    .control-btn {
+        display: none;
+    }
+}
+
+/* Different PDF styling */
+.pdf-content {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    text-align: left;
+    max-width: 210mm; /* A4 width */
+    margin: 0 auto;
+    border: 1px solid #000;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.pdf-content h1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.pdf-content h2 {
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.pdf-content div {
+    margin-bottom: 10px;
+}
+
+.pdf-content span {
+    font-weight: bold;
+}

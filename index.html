@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Update Receipt</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include JavaScript libraries from jsDelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
+    <!-- Include custom script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container" id="form-container">
+        <h1>UPDATE AS AT <input type="date" id="calendar-input"></h1>
+        <h2>Inflow</h2>
+        <div class="inflow-section" id="inflow-section">
+            <!-- Inflow fields -->
+            <div class="inflow-item">
+                <input type="text" placeholder="Title of Inflow">
+                <input type="number" placeholder="Amount in Naira" class="inflow-naira">
+                <input type="number" placeholder="Amount in Dollars" class="inflow-dollar">
+                <input type="date" placeholder="Date">
+            </div>
+            <button class="control-btn" id="add-inflow">Add Inflow</button>
+            <div>Total Inflow Naira: ₦<span id="total-inflow-naira">0</span></div>
+            <div>Total Inflow Dollars: $<span id="total-inflow-dollar">0</span></div>
+        </div>
+        <h2>Disbursement</h2>
+        <div class="disbursement-section" id="disbursement-section">
+            <!-- Disbursement fields -->
+            <div class="disbursement-item">
+                <input type="text" placeholder="Title of Disbursement">
+                <input type="number" placeholder="Amount in Naira" class="disbursement-naira">
+                <input type="number" placeholder="Amount in Dollars" class="disbursement-dollar">
+                <input type="date" placeholder="Date">
+            </div>
+            <button class="control-btn" id="add-disbursement">Add Disbursement</button>
+            <div>Total Disbursement Naira: ₦<span id="total-disbursement-naira">0</span></div>
+            <div>Total Disbursement Dollars: $<span id="total-disbursement-dollar">0</span></div>
+        </div>
+        <h2>Summary</h2>
+        <div class="summary-section">
+            <label>Balance Brought Forward (Naira): ₦<input type="number" id="balance-naira"></label>
+            <label>Balance Brought Forward (Dollars): $<input type="number" id="balance-dollars"></label>
+            <div>Updated Balance Naira: ₦<span id="updated-balance-naira">0</span></div>
+            <div>Updated Balance Dollars: $<span id="updated-balance-dollars">0</span></div>
+        </div>
+        <!-- Save to PDF button -->
+        <button class="control-btn" id="save-pdf">Save to PDF</button>
+    </div>
+</body>
+</html>
